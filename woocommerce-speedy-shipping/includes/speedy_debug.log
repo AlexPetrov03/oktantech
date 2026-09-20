@@ -1,0 +1,54 @@
+-----
+Array
+(
+    [wc_order_attribution_source_type] => typein
+    [wc_order_attribution_referrer] => https://demo.speedy.bg/wordpress/product/product-2/
+    [wc_order_attribution_utm_campaign] => (none)
+    [wc_order_attribution_utm_source] => (direct)
+    [wc_order_attribution_utm_medium] => (none)
+    [wc_order_attribution_utm_content] => (none)
+    [wc_order_attribution_utm_id] => (none)
+    [wc_order_attribution_utm_term] => (none)
+    [wc_order_attribution_utm_source_platform] => (none)
+    [wc_order_attribution_utm_creative_format] => (none)
+    [wc_order_attribution_utm_marketing_tactic] => (none)
+    [wc_order_attribution_session_entry] => https://demo.speedy.bg/wordpress/cart/
+    [wc_order_attribution_session_start_time] => 2024-09-24 07:57:20
+    [wc_order_attribution_session_pages] => 7
+    [wc_order_attribution_session_count] => 54
+    [wc_order_attribution_user_agent] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+    [city_id] => 2659
+    [chosen_method] => speedy_shipping
+    [billing_first_name] => Danail
+    [billing_last_name] => Marinov
+    [billing_company] => 
+    [billing_country] => BG
+    [billing_shipping_type] => office
+    [billing_state] => BG-23
+    [billing_city] => 2659
+    [billing_office] => 780
+    [billing_address_1] => ул. димитър цончев 10
+    [billing_address_2] => 
+    [billing_phone] => 0889308444
+    [billing_email] => speedy@speedy.bg
+    [shipping_first_name] => Danail
+    [shipping_last_name] => Marinov
+    [shipping_company] => 
+    [shipping_country] => BG
+    [shipping_shipping_type] => office
+    [shipping_state] => BG-23
+    [shipping_city] => 0
+    [shipping_office] => 0
+    [shipping_address_1] => ул. димитър цончев 10
+    [shipping_address_2] => 
+    [order_comments] => 
+    [shipping_method] => Array
+        (
+            [0] => speedy_shipping
+        )
+
+    [payment_method] => cod
+    [woocommerce-process-checkout-nonce] => 79b30963d4
+    [_wp_http_referer] => /wp/checkout/
+)
+

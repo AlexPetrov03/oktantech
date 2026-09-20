@@ -1,0 +1,136 @@
+.order-form {
+    display: none;
+}
+
+.order-form input,
+.order-form select {
+    width: 100%;
+}
+
+.order-form select,
+.order-form textarea {
+    margin-top: 0;
+    padding-top: 8px;
+}
+
+.order-form label {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.terms {
+    margin: 12px 0;
+    display: block;
+}
+
+.calculate-shipping {
+    margin-bottom: 12px;
+}
+
+.form-toggle-container {
+    display: flex;
+    justify-content: center;
+}
+
+.order-form-toggler,
+.calculate-shipping {
+    width: 100%;
+    padding: 10px 25px;
+}
+
+.order-form-toggler:after {
+    content: '+';
+    font-size: 1.1em;
+}
+
+.order-form-toggler.opened:after {
+    content: '-';   
+}
+
+.street-wrapper {
+    display: none;
+}
+
+.error-box {
+    display: none;
+    margin-top: 12px;
+    color: #fff;
+    padding: 8px 22px;
+    background-color: #e74c3c;
+    border: 2px solid #c0392b;
+    border-radius: 5px;
+}
+
+.ui-autocomplete {
+    z-index: 1000;
+    background-color: #fff;
+    width: 100% !important;
+    border: 1px solid #000;
+}
+
+.ui-autocomplete li {
+    padding: 4px 6px;
+    border-bottom: 1px solid #000;
+}
+
+.ui-autocomplete li:last-child {
+    border-bottom: 0;
+}
+
+.fast-order-loader {
+    z-index: 2000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-price,
+.shipping-price,
+.fast-order-loader {
+    display: none;
+}
+
+.shipping-price-label {
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .single_add_to_cart_button {
+        width: 100% !important;
+    }
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.select2-selection {
+    height: 38.4px !important;
+    border-radius: 2px !important;
+    padding-top: 4px !important;
+    padding-left: 6px !important;
+}
+
+.select2-selection__arrow {
+    display: none;
+}
+
+.select2-results__option--highlighted {
+    background-color: #444 !important;
+}

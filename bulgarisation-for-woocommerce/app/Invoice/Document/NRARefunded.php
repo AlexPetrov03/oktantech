@@ -1,0 +1,102 @@
+<?php
+namespace Woo_BG\Invoice\Document;
+use Woo_BG\Invoice\Order\Order;
+use \Automattic\WooCommerce\Admin\Overrides\OrderRefund;
+
+defined( 'ABSPATH' ) || exit;
+
+class NRARefunded extends BaseDocument {
+	public $title, $parent_order, $return_methods, $return_method;
+
+	function __construct( $refund_id ) {
+		$order = new OrderRefund( $refund_id );
+		parent::__construct( $order );
+		$this->parent_order = wc_get_order( $this->woo_order->get_parent_id() );
+		$this->order = new Order( $order );
+		$this->return_methods = woo_bg_get_return_methods();
+		$this->return_method = woo_bg_get_option( 'shop', 'return_method' );
+		$this->payment_method = $this->return_methods[ $this->return_method ]['label'];
+
+		$this->set_title( apply_filters( 'woo_bg/admin/invoice/order_document_title_refunded', __( 'Refunded Order - Original', 'bulgarisation-for-woocommerce' ) ) );
+		$this->meta = 'woo_bg_refunded_order_document';
+
+		$this->document_number_meta = 'woo_bg_refunded_order_number';
+	}
+
+	public function get_head_items() {
+		return apply_filters( 'woo_bg/invoice/head_items', array(
+			'reference' => array(
+				'label' => '№',
+				'value' => str_pad( $this->get_document_number(), 10, '0', STR_PAD_LEFT ),
+			),
+			'date' => array(
+				'label' => __( 'Order date', 'bulgarisation-for-woocommerce' ),
+				'value' => date_i18n( 'M d, Y', strtotime( $this->woo_order->get_date_created() ) ),
+			),
+			'date-of-tax' => array(
+				'label' => __( 'Date of tax. event', 'bulgarisation-for-woocommerce' ),
+				'value' => date_i18n( 'M d, Y', strtotime( $this->woo_order->get_date_created() ) ),
+			),
+			'due-date' => array(
+				'label' => __( 'Due date', 'bulgarisation-for-woocommerce' ),
+				'value' => date_i18n( 'M d, Y', strtotime( $this->woo_order->get_date_created() ) ),
+			),
+			'address' => array(
+				'label' => __( 'Place of transaction', 'bulgarisation-for-woocommerce' ),
+				'value' => $this->city,
+			),
+			'order-number' => array(
+				'label' => __( 'Order Number', 'bulgarisation-for-woocommerce' ),
+				'value' => $this->parent_order->get_order_number(),
+			),
+		), $this );
+	}
+
+	public function get_to_items() {
+		if ( $this->parent_order->get_meta('_billing_to_company') === '1' ) {
+			$items = apply_filters( 'woo_bg/invoice/set_to_company', array(
+				$this->parent_order->get_billing_company(),
+				sprintf( __('EIK: %s', 'bulgarisation-for-woocommerce' ), $this->parent_order->get_meta('_billing_company_eik') ),
+				sprintf( __('VAT Number: %s', 'bulgarisation-for-woocommerce' ), $this->parent_order->get_meta('_billing_vat_number') ),
+				sprintf( __('MOL: %s', 'bulgarisation-for-woocommerce' ), $this->parent_order->get_meta('_billing_company_mol') ),
+				$this->parent_order->get_meta('_billing_company_address'),
+				$this->parent_order->get_meta('_billing_company_settlement'),
+				'&nbsp;',
+				sprintf( __('Phone: %s', 'bulgarisation-for-woocommerce' ), $this->parent_order->get_billing_phone() ),
+				sprintf( __('E-mail: %s', 'bulgarisation-for-woocommerce' ), $this->parent_order->get_billing_email() ),
+			), $this->parent_order );
+		} else {
+			$items = apply_filters( 'woo_bg/invoice/set_to_person', array(
+				$this->parent_order->get_billing_first_name() . ' ' . $this->parent_order->get_billing_last_name(),
+				$this->parent_order->get_billing_address_1() . " " . $this->parent_order->get_billing_address_2(),
+				$this->parent_order->get_billing_city() .", " . $this->parent_order->get_billing_postcode(),
+				'&nbsp;',
+				sprintf( __('Phone: %s', 'bulgarisation-for-woocommerce' ), $this->parent_order->get_billing_phone() ),
+				sprintf( __('E-mail: %s', 'bulgarisation-for-woocommerce' ), $this->parent_order->get_billing_email() ),
+			), $this->parent_order );
+		}
+
+		return apply_filters( 'woo_bg/invoice/to_items', $items, $this );
+	}
+
+	public function get_additional_items() {
+		$items = array();
+
+		if ( $this->payment_method ) {
+			$items[] = $this->payment_method;
+		}
+
+		if ( $this->transaction_id ) {
+			$items[] = $this->transaction_id;
+		}
+
+		if ( woo_bg_get_option( 'apis', 'enable_multi_currency' ) === 'yes' ) {
+			$items[] = __( '1 EUR = 1.95583 BGN', 'bulgarisation-for-woocommerce' );
+		}
+
+		$items[] = $this->prepared_by . " " . $this->identification_code;
+		$items[] = $this->parent_order->get_billing_first_name() . ' ' . $this->parent_order->get_billing_last_name();
+
+		return apply_filters( 'woo_bg/invoice/additional_items', $items, $this );
+	}
+}

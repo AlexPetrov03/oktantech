@@ -1,0 +1,207 @@
+=== Bulgarisation for WooCommerce ===
+Contributors: autopolisbg
+Tags: woocommerce, e-commerce, invoice, shipping, bulgaria
+Requires at least: 5.3
+Tested up to: 7.0
+Donate link: https://revolut.me/tihomi9gj5
+Requires PHP: 7.4
+Stable tag: 4.0.13
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+
+Всичко необходимо за вашият онлайн магазин за България. Включва облекчен режим за Наредба - H-18 и методи за доставка с Еконт, CVC и Спиди.
+
+== Description ==
+
+Този плъгин добавя възможност за:
+
+*   Генериране на одиторски XML файл съобразно Наредба - H-18. 
+*   Проверка на цените в магазина за "Математически невъзможни цени с ДДС".
+*   Генериране на документ за поръчката. 
+*   Генериране на фактури за поръчката. 
+*   Генериране на кредитно известие при върната поръчка.
+*   Генериране на експорт файл с фактури и кредитни известия за Microinvest Delta
+*   Добавя полета за фактуриране към фирма.
+*   Проверка на ДДС номер с европейската система VIES.
+*   Проверка за отзиви от Connectix.bg
+*   Проверка за отзиви от nepostop.bg
+*   Добавена възможност за добавяне на вече създадени поръчки към одиторският файл.
+*   Добавени методи за доставка с [Еконт](https://www.econt.com/).
+*   Добавени методи за доставка със [BOX NOW](https://boxnow.bg/e-shops).
+*   Добавени методи за доставка със [Pigeon Express](https://pigeonexpress.com/).
+*   Добавени методи за доставка със [Спиди](https://speedy.bg/).
+*   Добавени методи за доставка със [CVC](https://cvc.bg/).
+*   Добавена възможност за показване на цените в две валути BGN/EUR.
+
+Плъгинът използва следните помощни библиотеки:
+
+*   За генериране на одиторския файл - https://github.com/escapeboy/nra-audit-generator ( модифициран )
+*   За генериране на QR код в документите - https://github.com/chillerlan/php-qrcode
+*   За валидиране на ДДС номер - https://github.com/ddeboer/vatin
+
+=== Забележки ===
+
+*   За да работи коректно плъгина моля попълнете всички задължителни полета, включително настройките за всеки платежен метод.
+*   При нужда свържете се с вашият счетоводител, ако не сте сигурни за някое от полетата.
+*   За да използвате методи на доставка с Еконт/BOX NOW/Pigeon Express/CVC/Спиди, трябва да включите опцията в главните настройки на плъгина. След запазване и презареждане на страницата ще се появи нов таб с настройките за Еконт/BOX NOW/CVC/Спиди. След това добавете желаните методи за доставка ( за адрес и офис трябва да имате 2 метода за доставка ) в зоните за доставка - WooCommerce >> Настройки >> Доставка >> Зони за доставка.
+
+[Facebook група](https://www.facebook.com/groups/bulgarisationforwoocommerce/)
+[GitHub](https://github.com/susameca/bulgarisation-for-woocommerce) хранилището на плъгина където можете да допринесете към развитието на плъгина.
+
+=== PRO version ===
+*   Скрива повечето нежелани полета от чекаута като държава, град, област, пощенски код, адрес 1/2 и като техен заместител добавя ново поле за град с дропаун с градовете от API на спедитора. Потребителя също има поле за търсене. В допълнение ще имате друга настройка, която да включи полето за държава ако искате да продавате в Гърция и Румъния.
+*   Променя дефолтните радио бутони на шипинг методите с по-стилизирани нормални бутони.
+*   Добавяне на доставки до Гърция и Румъния за Еконт и Спиди.
+*   Възможност за добавяне номера на поръчката в описанието на товарителницата.
+*   Добавя възможност за автоматична смяна на статусите на поръчките спрямо статуса на товарителницата.
+*   Добавя nekorekten.com като източник на отзиви за потребителите
+*   Добавя възможност за автоматично попълване на данните за фирмата според въведения ЕИК.
+
+== Frequently Asked Questions ==
+
+= Може ли да се допълва плъгина =
+
+Да, плъгина е разработен с мисълта за лесно добавяне на допълнителни функционалности.
+
+= Може ли да се превежда на други езици =
+
+Да, текстовете на плъгина са написани на английски и съобразено с начина на превеждане на текстове в WordPress.
+
+== Screenshots ==
+
+1. Страница за настройки
+2. Колони на поръчките
+3. Страница на поръчка
+4. Чекаут
+5. Експорти
+
+== External services ==
+
+Този плъгин използва външни услуги (API) с цел автоматизация на процесите в електронния магазин:
+
+- Създаване и управление на товарителници към куриерски услуги, добавяне на офис локатори и предоставяне на линкове за проследяване на пратките:
+  - Econt ( [terms-of-use](https://www.econt.com/econt-express/terms-of-use) ) 
+    - https://api.bulgarisation.bg/
+    - https://www.econt.com/
+    - http://ee.econt.com/
+    - http://demo.econt.com/
+    - https://officelocator.econt.com/
+  - Speedy ( [terms](https://api.speedy.bg/api/docs/#href-terms) )
+    - https://api.bulgarisation.bg/
+    - https://www.speedy.bg/
+    - https://api.speedy.bg/
+    - https://services.speedy.bg/
+  - BoxNow 
+    - https://api.bulgarisation.bg/
+    - https://boxnow.bg/en/
+    - https://map.boxnow.bg/
+    - https://api-production.boxnow.bg/
+    - https://api-stage.boxnow.bg/
+  - Pigeon Express
+    - https://api.pigeonexpress.com/v1
+    - https://api-demo.pigeonexpress.com/v1
+  - CVC
+    - https://lox.e-cvc.bg/
+
+- Проверка за некоректни клиенти чрез услугата:
+  - connectix.bg
+    - https://api-sandbox.connectix.bg/
+    - https://api.connectix.bg/trackings
+    - https://api.connectix.bg/shopper/check
+    - https://api.connectix.bg/integration/register
+  - nepostop.bg
+    - https://nepostop.com/api/v1/phone-check
+    - https://nepostop.com/api/v1/shipments
+
+- При съгласие за подпомагане на разработката за плъгина се събира информация коя основна настройка е включена от плъгина към https://license.bulgarisation.bg/
+
+При работа с тези външни услуги могат да бъдат изпращани данни като: име и адрес на получателя, телефон, имейл, стойност на поръчката, наложен платеж, както и друга информация, необходима за създаване на товарителници и/или проверка на коректността на клиента. Данните се изпращат единствено с цел обработка и доставка на поръчката и проверка за потенциални злоупотреби.
+
+Условия за ползване
+
+Този плъгин използва API услуга, поддържана от разработчика, за предоставяне на функционалността си.
+
+С инсталирането и използването на плъгина Вие приемате следните условия:
+
+* API услугата се предоставя „във вида, в който е“ („AS IS“), без гаранция за непрекъсната или безпроблемна работа.
+* Разработчикът си запазва правото по всяко време да променя, ограничава, временно спира или окончателно прекратява достъпа до API услугата с цел защита на нейната сигурност, стабилност и коректно функциониране.
+* Забранява се използването на модифицирани, пиратски, нелицензирани или по друг начин неоторизирани версии на неговите платени издания.
+* Всеки опит за заобикаляне на лицензионната система, механизмите за защита или ограниченията на API услугата представлява нарушение на настоящите условия и може да доведе до незабавно и безсрочно прекратяване на достъпа до услугата без предварително уведомление.
+* Разработчикът си запазва правото да блокира достъпа на конкретни домейни, уебсайтове, IP адреси или лицензионни ключове при установено нарушение на настоящите условия или злоупотреба с услугата.
+* Разработчикът не носи отговорност за преки или косвени вреди, пропуснати ползи, загуба на приходи, клиенти или други неблагоприятни последици, произтичащи от ограничаване или прекратяване на достъпа до API услугата вследствие на нарушение на настоящите условия.
+* Използването на плъгина означава, че приемате настоящите условия.
+
+Ако считате, че достъпът Ви е ограничен по погрешка, можете да се свържете с разработчика за извършване на проверка.
+
+== Changelog ==
+= 4.0.13 =
+Couriers: Fix label autogeneration
+Econt: Add functionality to block creating order for places where econt doesn't  ship
+
+= 4.0.12 =
+Fix cities prefixes
+Couriers: Optimize save label data
+
+= 4.0.11 =
+Speedy: Add additional fields for address
+Econt: Add additional fields for address
+Admin: Add company fields to be visible
+Couriers: Add notes for label create/update/delete
+Speedy, Econt, Pigeon: Optimize address fields html
+
+= 4.0.9 =
+Optimize admin panel appearance and fields
+NRA: Performance optimizations
+Exports: Performance optimizations
+Shippings: performance optimizations
+Boxnow: Update widget map
+Speedy, Pigeon, Econt: Optimize address search
+Speedy: Fix js errors from old orders
+
+= 4.0.7 =
+Pigeon: Fix streets lookup
+
+= 4.0.6 =
+Pigeon: Fix office/APS lookup
+Add message for label printer
+Invoices: Add filter for wordwrap length
+NRA: Optimize items
+
+= 4.0.5 =
+Fix WooCommerce session on update checkpout
+Econt: Add packs array
+Econt, Pigeon, Speedy: Automatically fit order in multiple automats
+Pigeon: Fix labels pdf
+Pigeon: Add ability to print labels in different sizes
+Couriers: normalize text in labels
+Couriers: Optimize logic for methods visibility based on size and kg of order
+
+= 4.0.3 =
+Export ZIP: Fix bytes, Add clearstatcache
+Pigeon: Add bulgarisation header
+Pigeon: Fix label generation and fields loading in admin
+BoxNow: Change packages to be separate labels
+Add filter for aps disabling
+Econt, Speedy: Change automat type to not be added if package dimentions cannot fit
+Econt, Speedy: Separate office and automat delivery types
+Econt: Separate office and automat delivery types
+
+= 4.0.2 =
+Speedy: Optimizations
+Speedy: Add customer notes to label
+Econt: Optimize label generation
+Pigeon: Optimize label generation
+Pigeon: Add customer notes to label
+
+= 4.0.1 =
+Couriers: Fix labels in admin column
+Speedy: Fix package default size to fits in APS
+
+= 4.0.0 =
+Add integration with Pigeon express
+Add impossible vat prices functionality
+Add separate invoice/credit notice copy documents with accountant email
+Speedy,BoxNow: Optimize label pdf rendering
+Order Columns: Optimize labels text
+NRA export: Optimizations
+Speedy: Optimizations
