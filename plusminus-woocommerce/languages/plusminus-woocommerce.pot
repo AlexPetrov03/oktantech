@@ -1,0 +1,413 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Plus Minus Integration for WooCommerce\n"
+"POT-Creation-Date: 2023-02-05 21:21+0200\n"
+"PO-Revision-Date: 2023-02-05 21:21+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: plusminus-woocommerce.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/class-plugin-actions.php:45
+#, php-format
+msgid "Import process completed. %s product is created."
+msgid_plural "Import process completed. %s products are created."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-plugin-actions.php:48
+msgid "No products found for import"
+msgstr ""
+
+#: includes/class-plugin-actions.php:57 includes/class-plugin-actions.php:113
+#: includes/class-plugin-actions.php:131
+msgid "Cannot connect to the server"
+msgstr ""
+
+#: includes/class-plugin-actions.php:72 includes/class-plugin-actions.php:98
+#, php-format
+msgid "Update process completed for %s product."
+msgid_plural "Update process completed for %s products."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-plugin-actions.php:75 includes/class-plugin-actions.php:101
+msgid "No products found for update"
+msgstr ""
+
+#: includes/class-plugin-actions.php:123
+msgid "Connection successful"
+msgstr ""
+
+#: includes/class-plugin-actions.php:280
+msgid "Missing token key"
+msgstr ""
+
+#: includes/class-plugin-actions.php:283
+msgid "Missing store name"
+msgstr ""
+
+#: includes/class-plugin-actions.php:286
+msgid "Missing company name"
+msgstr ""
+
+#: includes/class-plugin-actions.php:289
+msgid "Missing serial number"
+msgstr ""
+
+#: includes/class-plugin-actions.php:295
+msgid "Invalid login details"
+msgstr ""
+
+#: includes/class-plugin-actions.php:305
+msgid "Invalid command"
+msgstr ""
+
+#: includes/class-plugin-actions.php:313
+msgid "Provided store was not found on the server"
+msgstr ""
+
+#: includes/class-plugin-actions.php:318
+msgid "Blank server response"
+msgstr ""
+
+#: includes/class-plugin-options.php:68
+msgid "Connection test"
+msgstr ""
+
+#: includes/class-plugin-options.php:69
+msgid ""
+"Test the connection between your WooCommerce store and the Plus Minus app."
+msgstr ""
+
+#: includes/class-plugin-options.php:73
+msgid "Test"
+msgstr ""
+
+#: includes/class-plugin-options.php:86
+msgid "Manually update products' quantity and/or price"
+msgstr ""
+
+#: includes/class-plugin-options.php:87
+msgid ""
+"Start a manual update of the products' parameters based on the settings."
+msgstr ""
+
+#: includes/class-plugin-options.php:91
+msgid "Update"
+msgstr ""
+
+#: includes/class-plugin-options.php:104
+msgid "Import all products from the Plus Minus app into the WooCommerce store"
+msgstr ""
+
+#: includes/class-plugin-options.php:105
+msgid ""
+"Import all products that are not found by code from the Plus Minus app into "
+"the WooCommerce store. Elighable products should have a code, quantity, and "
+"price in the Plus Minus app."
+msgstr ""
+
+#: includes/class-plugin-options.php:109
+msgid "Import"
+msgstr ""
+
+#: includes/class-plugin-options.php:123
+msgid "Download orders as a file"
+msgstr ""
+
+#: includes/class-plugin-options.php:124
+msgid ""
+"Download all orders that are not marked as exported as a file that can be "
+"imported in the Plus Minus app manually."
+msgstr ""
+
+#: includes/class-plugin-options.php:127
+msgid "Download"
+msgstr ""
+
+#: includes/class-plugin-options.php:154
+msgid "Export Orders to Plus Minus"
+msgstr ""
+
+#: includes/class-plugin-options.php:161
+msgid "Allow orders export"
+msgstr ""
+
+#: includes/class-plugin-options.php:169
+msgid "Security key"
+msgstr ""
+
+#: includes/class-plugin-options.php:177
+msgid "Only orders with status"
+msgstr ""
+
+#: includes/class-plugin-options.php:185
+msgid "Don't export Cancelled, Draft and Failed orders"
+msgstr ""
+
+#: includes/class-plugin-options.php:193
+msgid "Plus Minus Server Settings"
+msgstr ""
+
+#: includes/class-plugin-options.php:200
+msgid "Serial Number"
+msgstr ""
+
+#: includes/class-plugin-options.php:208
+msgid "Token"
+msgstr ""
+
+#: includes/class-plugin-options.php:216
+msgid "Company Name"
+msgstr ""
+
+#: includes/class-plugin-options.php:224
+msgid "Store Name"
+msgstr ""
+
+#: includes/class-plugin-options.php:232
+msgid "Update available quantity"
+msgstr ""
+
+#: includes/class-plugin-options.php:240
+msgid "Update regular price"
+msgstr ""
+
+#: includes/class-plugin-options.php:248
+msgid "Price parameter"
+msgstr ""
+
+#: includes/class-plugin-options.php:257
+msgid "Automatic update values"
+msgstr ""
+
+#: includes/class-plugin-options.php:335
+msgid ""
+"Enter authorization information to allow the automatic update of price and "
+"quantity for the existing WooCommerce products. During the import, products "
+"in the WooCommerce store are located by the SKU code that you have in the "
+"product settings and the code or barcode fields in the Plus Minus store."
+msgstr ""
+
+#: includes/class-plugin-options.php:365
+msgid ""
+"This field contains the security key you need to enter in the Plus Minus "
+"settings to import new orders. When the option to allow orders export is "
+"enabled, a new key will be generated automatically when the settings are "
+"saved."
+msgstr ""
+
+#: includes/class-plugin-options.php:374
+msgid ""
+"Enter the name of the store in the Plus Minus app where products are "
+"located. The name should be exactly as it appears in the Plus Minus app."
+msgstr ""
+
+#: includes/class-plugin-options.php:382
+msgid ""
+"Enter the name of the company in the Plus Minus app where products are "
+"located. The comapny name should be exactly as it appears in the Plus Minus "
+"app."
+msgstr ""
+
+#: includes/class-plugin-options.php:396
+msgid ""
+"Update the products' stock quantity with the one from the Plus Minus app."
+msgstr ""
+
+#: includes/class-plugin-options.php:410
+msgid ""
+"Update the products' regular price with the one from the Plus Minus app."
+msgstr ""
+
+#: includes/class-plugin-options.php:424
+msgid "Enable the option to export and import orders in Plus Minus."
+msgstr ""
+
+#: includes/class-plugin-options.php:443
+msgid "No"
+msgstr ""
+
+#: includes/class-plugin-options.php:444
+msgid "5 minutes"
+msgstr ""
+
+#: includes/class-plugin-options.php:445
+msgid "10 minutes"
+msgstr ""
+
+#: includes/class-plugin-options.php:446
+msgid "15 minutes"
+msgstr ""
+
+#: includes/class-plugin-options.php:447
+msgid "30 minutes"
+msgstr ""
+
+#: includes/class-plugin-options.php:448
+msgid "1 hour"
+msgstr ""
+
+#: includes/class-plugin-options.php:449
+msgid "3 hours"
+msgstr ""
+
+#: includes/class-plugin-options.php:450
+msgid "6 hours"
+msgstr ""
+
+#: includes/class-plugin-options.php:451
+msgid "12 hours"
+msgstr ""
+
+#: includes/class-plugin-options.php:452
+msgid "24 hours"
+msgstr ""
+
+#: includes/class-plugin-options.php:455
+msgid ""
+"Enable automatic updating of the selected parameters (price and/or "
+"quantity). Leave it at \"No\" if you will update only manually."
+msgstr ""
+
+#: includes/class-plugin-options.php:462
+msgid "Retail Price"
+msgstr ""
+
+#: includes/class-plugin-options.php:463
+msgid "Retail Price with VAT"
+msgstr ""
+
+#: includes/class-plugin-options.php:464
+msgid "Wholesale Price"
+msgstr ""
+
+#: includes/class-plugin-options.php:465
+msgid "Price 0"
+msgstr ""
+
+#: includes/class-plugin-options.php:466
+msgid "Price 1"
+msgstr ""
+
+#: includes/class-plugin-options.php:467
+msgid "Price 2"
+msgstr ""
+
+#: includes/class-plugin-options.php:468
+msgid "Price 3"
+msgstr ""
+
+#: includes/class-plugin-options.php:469
+msgid "Price 4"
+msgstr ""
+
+#: includes/class-plugin-options.php:470
+msgid "Price 5"
+msgstr ""
+
+#: includes/class-plugin-options.php:471
+msgid "Price 6"
+msgstr ""
+
+#: includes/class-plugin-options.php:472
+msgid "Price 7"
+msgstr ""
+
+#: includes/class-plugin-options.php:473
+msgid "Price 8"
+msgstr ""
+
+#: includes/class-plugin-options.php:474
+msgid "Price 9"
+msgstr ""
+
+#: includes/class-plugin-options.php:477
+msgid ""
+"The price parameter that should be used to read from the selected store in "
+"the Plus Minus app."
+msgstr ""
+
+#: includes/class-plugin-options.php:486
+msgid "All"
+msgstr ""
+
+#: includes/class-plugin-options.php:493
+msgid "Only export orders with a specific status (for example, Completed). "
+msgstr ""
+
+#: includes/class-plugin-orders-export.php:340
+msgid "Please confirm that you wish to remove the Plus Minus document"
+msgstr ""
+
+#: includes/class-plugin-orders-export.php:343
+msgid "Enter Plus Minus document"
+msgstr ""
+
+#: includes/class-plugin-orders-export.php:343
+msgid "Add document"
+msgstr ""
+
+#: includes/class-plugin-orders-export.php:358
+msgid "PM Document"
+msgstr ""
+
+#: includes/class-plugin-orders-export.php:380
+#: includes/class-plugin-orders-export.php:414
+msgid "Missing required parameters"
+msgstr ""
+
+#: includes/class-plugin-orders-export.php:390
+msgid "Document cleared. The order page will reload."
+msgstr ""
+
+#: includes/class-plugin-orders-export.php:394
+#: includes/class-plugin-orders-export.php:428
+msgid "Order not found!"
+msgstr ""
+
+#: includes/class-plugin-orders-export.php:400
+#: includes/class-plugin-orders-export.php:434
+msgid "Cannot executed the command. Please reload the page and try again"
+msgstr ""
+
+#: includes/class-plugin-orders-export.php:424
+msgid "Document saved. The order page will reload."
+msgstr ""
+
+#. Author of the plugin/theme
+#: plusminus-woocommerce.php:122 plusminus-woocommerce.php:123
+msgid "Plus Minus"
+msgstr ""
+
+#: plusminus-woocommerce.php:240
+msgid "Settings"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Plus Minus Integration for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://plusminus.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Connect Plus Minus with WooCommerce to synchronize product quantity and "
+"price and import orders."
+msgstr ""
